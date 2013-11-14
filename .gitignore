@@ -13,3 +13,9 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+doc/api
+doc/app
+*.swp
+*~
+.DS_Store
+.sass-cache
