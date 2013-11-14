@@ -6,7 +6,7 @@ gem 'rails', '3.2.9'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'mysql2'
-
+gem 'gravatar_image_tag', '0.1.0'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -21,6 +21,26 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'kaminari'
+
+
+group :development do
+  gem 'puma'
+  gem 'rspec-rails', '2.11.0'
+  gem 'annotate', '>=2.5.0'
+end
+
+group :test do
+  gem 'puma'
+  gem 'rspec', '2.11.0'
+  gem 'webrat', '0.7.1'
+  gem 'factory_girl_rails', '1.0'
+end
+
+group :production do
+  gem 'pg'
+  gem 'thin'
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
