@@ -1,5 +1,8 @@
 TwitterClient::Application.routes.draw do
   match 'home' => 'welcome#index'
+  match 'signup' => 'users#new'
+
+  resources :users
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
