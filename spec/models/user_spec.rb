@@ -18,7 +18,7 @@ describe User do
 
   before(:each) do
     @attr = {
-      :name => "Example User",
+      :name => "Username",
       :email => "user@example.com",
       :password => "foobar",
       :password_confirmation => "foobar"
@@ -40,7 +40,7 @@ describe User do
   end
 
   it "should reject names that are too long" do
-    long_name = "a" * 16 
+    long_name = "a" * 11 
     long_name_user = User.new(@attr.merge(:name => long_name))
     long_name_user.should_not be_valid
   end
@@ -54,7 +54,6 @@ describe User do
   end
 
   it "should reject duplicate email addresses" do
-    # put
     User.create!(@attr)
     user_with_duplicate_email = User.new(@attr)
     user_with_duplicate_email.should_not be_valid

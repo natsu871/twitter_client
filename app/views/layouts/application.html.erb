@@ -19,6 +19,9 @@
         <h3 class="text-muted">Twitter Client</h3>
       </div>
 
+      <% flash.each do |key, value| %>
+        <div class="flash <%= key %>"><%= value %></div>
+      <% end %>
       <%= yield %>
 
       <div class="footer">
