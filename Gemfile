@@ -28,6 +28,7 @@ group :development do
   gem 'puma'
   gem 'rspec-rails', '2.11.0'
   gem 'annotate', '>=2.5.0'
+  gem 'faker', '0.3.1'
 end
 
 group :test do
