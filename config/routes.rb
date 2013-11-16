@@ -1,8 +1,13 @@
 TwitterClient::Application.routes.draw do
-  match 'home' => 'welcome#index'
-  match 'signup' => 'users#new'
+  get "sessions/new"
+
+  match 'home'    => 'welcome#index'
+  match 'signup'  => 'users#new'
+  match 'signin'  => 'sessions#new'
+  match 'signout' => 'sessions#destroy'
 
   resources :users
+  resources :sessions, :only => [:new, :create, :destroy]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
