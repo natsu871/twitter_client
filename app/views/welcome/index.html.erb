@@ -9,6 +9,7 @@
         </td>
         <td class="sidebar">
           <%= render 'shared/user_info' %>
+          <%= render 'shared/stats' %>
         </td>
       </tr>
     </table>
@@ -16,6 +17,6 @@
 <% else %>
   <div class="jumbotron">
     <h1>Twitter<span> へようこそ</span></h1>
-    <p><%= link_to 'Sign up today!', '#', :class => 'btn btn-lg btn-success' %></p>
+    <p><%= link_to 'Sign up today!', signup_path, :class => 'btn btn-lg btn-success' %></p>
   </div>
 <% end %>
