@@ -1,4 +1,21 @@
-<div class="jumbotron">
-  <h1>Twitter<span> へようこそ</span></h1>
-  <p><%= link_to 'Sign up today!', '#', :class => 'btn btn-lg btn-success' %></p>
-</div>
+<% if signed_in? %>
+  <div class="jumbotron">
+    <table class="front" summary="For signed-in users">
+      <tr>
+        <td class="main">
+          <h2 class="micropost">What's up?</h2>
+          <%= render 'shared/micropost_form' %>
+          <%= render 'shared/feed' %>
+        </td>
+        <td class="sidebar">
+          <%= render 'shared/user_info' %>
+        </td>
+      </tr>
+    </table>
+  </div>
+<% else %>
+  <div class="jumbotron">
+    <h1>Twitter<span> へようこそ</span></h1>
+    <p><%= link_to 'Sign up today!', '#', :class => 'btn btn-lg btn-success' %></p>
+  </div>
+<% end %>

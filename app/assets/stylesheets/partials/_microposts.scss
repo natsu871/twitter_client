@@ -1,0 +1,25 @@
+// Place all the styles related to the microposts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.new_micropost {
+  margin-bottom: 40px;
+  #micropost_content {
+    margin-bottom: 20px;
+    height: 100px;
+  }
+  .actions {
+    width: 120px;
+  }
+}
+.front {
+  .list-group-item {
+    font-size: 15px;
+    line-height: 18px;
+  }
+}
+.micropost {
+  .timestamp {
+    color: #aaa;
+  }
+}
