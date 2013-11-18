@@ -25,10 +25,12 @@ class User < ActiveRecord::Base
                                    :dependent => :destroy
   has_many :followers, :through => :reverse_relationships, :source => :follower
 
+  name_regex  = /^[a-z0-9]+$/i
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
   validates :name,  :presence   => true,
-                    :length     => { :maximum => 10 }
+                    :length     => { :maximum => 10 },
+                    :format     => { :with => name_regex }
   validates :email, :presence   => true,
                     :format     => { :with => email_regex },
                     :uniqueness => { :case_sensitive => false }
