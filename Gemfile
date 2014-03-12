@@ -25,7 +25,7 @@ end
 
 gem 'jquery-rails'
 gem 'kaminari'
-
+gem 'newrelic_rpm'
 
 group :development do
   gem 'puma'
